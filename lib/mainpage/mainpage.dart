@@ -6,17 +6,27 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Second Screen'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Navigate back to first screen when tapped.
-          },
-          child: const Text('Go back!'),
+        appBar: AppBar(
+          title: const Text("Home"),
+          backgroundColor: Colors.blue,
+          actions: [
+            PopupMenuButton(
+                // add icon, by default "3 dot" icon
+                // icon: Icon(Icons.book)
+                itemBuilder: (context) {
+              return [
+                const PopupMenuItem<int>(
+                  value: 1,
+                  child: Text("Settings"),
+                ),
+              ];
+            }, onSelected: (value) {
+              if (value == 1) {
+                print("Settings menu is selected.");
+              }
+            }),
+          ],
         ),
-      ),
-    );
+        body: Container());
   }
 }

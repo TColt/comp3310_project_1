@@ -75,7 +75,7 @@ class _LoginState extends State<Login> {
                 onPressed: () {
                   if (emailController.text == "user" &&
                       passwordController.text == "password") {
-                    Navigator.pushNamed(context, '/second');
+                    Navigator.pushReplacementNamed(context, '/second');
                   } else {
                     showDialog(
                       context: context,
