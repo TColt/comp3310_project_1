@@ -23,16 +23,11 @@ class Login extends StatefulWidget {
   State<Login> createState() => _LoginState();
 }
 
-// Define a corresponding State class.
-// This class holds the data related to the Form.
 class _LoginState extends State<Login> {
-  // Create a text controller and use it to retrieve the current value
-  // of the TextField.
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     emailController.dispose();
     super.dispose();
   }
@@ -52,7 +47,6 @@ class _LoginState extends State<Login> {
                 child: Center(),
               ),
               Padding(
-                //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextField(
                   decoration: const InputDecoration(
@@ -65,7 +59,6 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.only(
                     left: 15.0, right: 15.0, top: 15, bottom: 0),
-                //padding: EdgeInsets.symmetric(horizontal: 15),
                 child: TextField(
                   obscureText: true,
                   decoration: const InputDecoration(
@@ -82,15 +75,12 @@ class _LoginState extends State<Login> {
                 onPressed: () {
                   if (emailController.text == "user" &&
                       passwordController.text == "password") {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const mainpage()));
+                    Navigator.pushNamed(context, '/second');
                   } else {
                     showDialog(
                       context: context,
                       builder: (context) {
                         return const AlertDialog(
-                          // Retrieve the text the that user has entered by using the
-                          // TextEditingController.
                           content: Text("Invalid user/password"),
                         );
                       },
