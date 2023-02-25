@@ -13,7 +13,6 @@ class LogInPage extends StatelessWidget {
   }
 }
 
-// Define a custom Form widget.
 class Login extends StatefulWidget {
   const Login({super.key});
 
