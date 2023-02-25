@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../mainpage/mainpage.dart';
-
 class LogInPage extends StatelessWidget {
   const LogInPage({super.key});
 
@@ -75,7 +73,7 @@ class _LoginState extends State<Login> {
                 onPressed: () {
                   if (emailController.text == "user" &&
                       passwordController.text == "password") {
-                    Navigator.pushReplacementNamed(context, '/second');
+                    Navigator.pushReplacementNamed(context, '/MainScreen');
                   } else {
                     showDialog(
                       context: context,

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class NonEmergencyScreen extends StatelessWidget {
+  const NonEmergencyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Home"),
+          title: const Text("NonEmergency"),
           backgroundColor: Colors.blue,
           actions: [
             PopupMenuButton(
@@ -37,10 +37,11 @@ class MainScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/MessageScreen');
+                      Navigator.pushNamed(
+                          context, '/NonEmergencyMessageScreen');
                     },
-                    label: const Text('Messaging'),
-                    icon: const Icon(Icons.chat_outlined),
+                    label: const Text('Food Assistance'),
+                    icon: const Icon(Icons.food_bank),
                   )),
               const Padding(
                 padding: EdgeInsets.only(top: 30.0),
@@ -49,10 +50,11 @@ class MainScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/NonEmergencyScreen');
+                      Navigator.pushNamed(
+                          context, '/NonEmergencyMessageScreen');
                     },
-                    label: const Text('Non-Emergency Help'),
-                    icon: const Icon(Icons.assist_walker),
+                    label: const Text('Bathroom Assistance'),
+                    icon: const Icon(Icons.bathroom_outlined),
                   )),
               const Padding(
                 padding: EdgeInsets.only(top: 30.0),
@@ -60,14 +62,26 @@ class MainScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
-                    backgroundColor: Colors.red,
-                    onPressed: () {},
-                    label: const Text('Emergency Help'),
-                    icon: const Icon(Icons.warning_sharp),
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, '/NonEmergencyMessageScreen');
+                    },
+                    label: const Text('Physical Assistance'),
+                    icon: const Icon(Icons.elderly),
                   )),
               const Padding(
                 padding: EdgeInsets.only(top: 30.0),
               ),
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: FloatingActionButton.extended(
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, '/NonEmergencyMessageScreen');
+                    },
+                    label: const Text('Other'),
+                    icon: const Icon(Icons.question_mark),
+                  )),
             ],
           ),
         ));
