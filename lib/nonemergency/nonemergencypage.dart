@@ -33,6 +33,7 @@ class NonEmergencyScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'food button',
                     onPressed: () {
                       Navigator.pushNamed(
                           context, '/NonEmergencyMessageScreen');
@@ -46,6 +47,7 @@ class NonEmergencyScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'bathroom button',
                     onPressed: () {
                       Navigator.pushNamed(
                           context, '/NonEmergencyMessageScreen');
@@ -59,6 +61,7 @@ class NonEmergencyScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'physical button',
                     onPressed: () {
                       Navigator.pushNamed(
                           context, '/NonEmergencyMessageScreen');
@@ -72,11 +75,25 @@ class NonEmergencyScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'other button',
                     onPressed: () {
                       Navigator.pushNamed(
                           context, '/NonEmergencyMessageScreen');
                     },
                     label: const Text('Other'),
+                    icon: const Icon(Icons.question_mark),
+                  )),
+              const Padding(
+                padding: EdgeInsets.only(top: 30.0),
+              ),
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: FloatingActionButton.extended(
+                    heroTag: 'cancel button',
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    label: const Text('Cancel'),
                     icon: const Icon(Icons.question_mark),
                   )),
             ],

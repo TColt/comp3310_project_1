@@ -33,6 +33,7 @@ class MainScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'message button',
                     onPressed: () {
                       Navigator.pushNamed(context, '/MessageScreen');
                     },
@@ -45,6 +46,7 @@ class MainScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'assist button',
                     onPressed: () {
                       Navigator.pushNamed(context, '/NonEmergencyScreen');
                     },
@@ -57,8 +59,11 @@ class MainScreen extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton.extended(
+                    heroTag: 'emergency button',
                     backgroundColor: Colors.red,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/EmergencyHelp');
+                    },
                     label: const Text('Emergency Help'),
                     icon: const Icon(Icons.warning_sharp),
                   )),

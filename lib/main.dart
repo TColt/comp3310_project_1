@@ -1,6 +1,8 @@
+import 'package:comp3310_project_1/emergencyhelpmessage/emergencymessage.dart';
 import 'package:comp3310_project_1/inboundnonemergency/nonemergencymessage.dart';
 import 'package:comp3310_project_1/nonemergency/nonemergencypage.dart';
 
+import 'emergencyhelp/emergencyhelpconfirm.dart';
 import 'mainpage/mainpage.dart';
 import 'messaging/message.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +20,8 @@ void main() {
       '/MessageScreen': (context) => const MessageScreen(),
       '/NonEmergencyScreen': (context) => const NonEmergencyScreen(),
       '/NonEmergencyMessageScreen': (context) => const NonEmergencyMessage(),
+      '/EmergencyHelp': (context) => const EmergencyHelp(),
+      '/EmergencyMessage': (context) => const EmergencyMessage(),
     },
   ));
 }
