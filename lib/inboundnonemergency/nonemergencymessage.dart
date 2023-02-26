@@ -10,10 +10,7 @@ class NonEmergencyMessage extends StatelessWidget {
           title: const Text("Non-Emergency Assistance"),
           backgroundColor: Colors.blue,
           actions: [
-            PopupMenuButton(
-                // add icon, by default "3 dot" icon
-                // icon: Icon(Icons.book)
-                itemBuilder: (context) {
+            PopupMenuButton(itemBuilder: (context) {
               return [
                 const PopupMenuItem<int>(
                   value: 1,
