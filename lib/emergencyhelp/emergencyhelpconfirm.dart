@@ -40,30 +40,42 @@ class EmergencyHelp extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(top: 60.0, left: 20, right: 20),
                 ),
-                Expanded(
-                  child: FloatingActionButton.extended(
-                    heroTag: 'yes button',
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/EmergencyMessage');
-                    },
-                    label: const Text('Yes'),
-                  ),
-                ),
+                SizedBox(
+                    width: 400,
+                    height: 100,
+                    child: FloatingActionButton.extended(
+                      heroTag: 'yes button',
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/EmergencyMessage');
+                      },
+                      label: const Text(
+                        'Yes',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      icon: const Icon(
+                        Icons.check,
+                        size: 50,
+                      ),
+                    )),
                 const Padding(
-                  padding: EdgeInsets.only(top: 60.0, left: 20, right: 20),
-                ),
-                Expanded(
-                  child: FloatingActionButton.extended(
-                    heroTag: 'no button',
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    label: const Text('No'),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 60.0, left: 20, right: 20),
-                ),
+                    padding: EdgeInsets.only(left: 30.0), child: Center()),
+                SizedBox(
+                    width: 400,
+                    height: 100,
+                    child: FloatingActionButton.extended(
+                      heroTag: 'no button',
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/MainScreen');
+                      },
+                      label: const Text(
+                        'No',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      icon: const Icon(
+                        Icons.cancel,
+                        size: 50,
+                      ),
+                    )),
               ]),
             ],
           ),
